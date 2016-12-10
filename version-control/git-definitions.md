@@ -12,4 +12,4 @@ A branch gives you a copy of your master file to work on. With branching, you ca
 A commit is a save point in your Git file. You will want to include a message that says what you did in your update from the most recent commit. Also included in a commit will be a timestamp, author, and a commit ID.
 
 * What is a merge conflict?
-A merge conflict occurs whenever two users make conflicting changes in the same file. One person may have deleted or altered something and the other person may not have. Git will ask you to resolve that conflict before it can complete the merge. There are several ways a merge conflict can occur.
+A merge conflict occurs whenever two users make conflicting changes in the same file. One person may have deleted or altered something and the other person may not have. Git will ask you to resolve that conflict before it can complete the merge....
