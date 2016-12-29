@@ -1,0 +1,26 @@
+#contact-info p {
+  font-size: .8em;
+}
+
+/*overwritten by more specific class below*/
+.job {
+  background: red;
+}
+.job {
+  background: #e9e5dc;
+  padding: 5px;
+  border-radius: 25px;
+  margin: 3px;
+}
+
+  h1:hover {
+    color: #FF00FF;
+  }
+  
+  li:first-child {
+    color: orange;
+}
+
+.accomplishments {
+  font-size: .8em;
+}
