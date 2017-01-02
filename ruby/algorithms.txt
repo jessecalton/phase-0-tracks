@@ -1,0 +1,48 @@
+Robot Elevator Task:
+
+- Enter Elevator with master.
+- Ask master (me) which number floor he lives on.
+- Locate that number on the panel of buttons.
+	- Numbers on panel will be in descending order.
+- Press button of correct floor number.
+- Press “Close Door” button.
+- Ride elevator to master’s floor.
+- When door opens:
+	- Let master step out of elevator first.
+	- If doors begin to close before master leaves:
+		- Press “Open Door” button.
+	- Step out of elevator.
+- Follow master to his dwellings and await further instruction.
+	
+
+Oatmeal Task:
+
+- Go to cupboard:
+	- Search for oatmeal container.
+	- When found, remove oatmeal container from cupboard.
+		- Place oatmeal container on table.
+	- Search for metal pot, measuring cups, and stirring spatula.
+		- Place metal pot on stove, but do not turn on stove.
+		- Place measuring cups and spatula on the table.
+- Remove the lid on the oatmeal container.
+- Using the measuring cups, measure out one cup of oats and pour into the pot.
+	- Place lid back on oatmeal container and return it to the cupboard.
+- Measure out two cups of water and pour into the pot.
+	- Stir the oats and water in the pot using the stirring spatula.
+- Turn on the stove to about medium heat.
+- When water starts to boil:
+	- Stir oatmeal for five seconds every thirty seconds.
+		- Make sure to stir at the bottom of the pot.
+	- If oatmeal begins to rise too fast:
+		- Turn down heat to low.
+- When mixture is thick:
+	- Turn off heat.
+	- Go to cupboard:
+		- Find a big, clean bowl and place it on the table.
+	- Pour the oatmeal into the bowl.
+		- Use the spatula to scrape the rest of the oatmeal into the bowl.
+- Fill the pot with soap and water and place in the sink.
+	- Use scrubbing brush to clean the pot and spatula
+	- Place cleaned pot and spatula on the dish rack.
+- Go to silverware drawer and find a spoon.
+- Oatmeal is ready to be eaten!
