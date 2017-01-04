@@ -1,3 +1,38 @@
 * {
+  font-family: helvetica;
+}
+
+header {
+  float: top;
+  background-color: yellow;
+  text-align: center;
+}
+
+.column-1 {
+  float: left;
+  width: 32%;
   background-color: blue;
+  padding: 1%;
+  color: white;
+
+}
+
+.column-2 {
+  float: right;
+  width: 64%;
+  background-color: green;
+  padding: 1%;
+  color: white;
+}
+
+a:link {
+  color: white;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  background-color: magenta;
+  border: solid 1px;
+  text-align: center;
 }
