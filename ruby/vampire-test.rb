@@ -1,6 +1,3 @@
-puts "How many employees will you be interviewing today?"
-employee_total = gets.chomp.to_i
-while employee_total > 0
 invalid_input = false
 puts "What is your name?"
 var_name = gets.chomp
@@ -20,6 +17,9 @@ if var_age.to_i == real_age.to_i && real_age.to_i != 2016
   correct_age = true
 elsif var_age.to_i != real_age.to_i && real_age.to_i != 2016
   correct_age = false
+  puts "I just set correct_age to #{correct_age}."
+  puts "the variable age is #{var_age.to_i}."
+  puts "the real age is #{real_age.to_i}"
 else
   invalid_input = true
 end
@@ -41,7 +41,11 @@ elsif health_insurance == "no"
 else
   invalid_input = true
 end
-
+puts "is_a_vampire = #{is_a_vampire}"
+puts "correct_age = #{correct_age}"
+puts "garlic_bread = #{garlic_bread}"
+puts "health_insurance = #{health_insurance}"
+puts "invalid_input = #{invalid_input}"
 if invalid_input
   puts "Results inconclusive."
 elsif is_a_vampire
@@ -55,18 +59,3 @@ elsif !(correct_age && (garlic_bread && health_insurance))
 else
 end
 
-var_finished = "done"
-user_input = ""
-puts "Name any allergies you have, one at a time. Type 'done' when you are finished."
-while user_input != var_finished
-  user_input = gets.chomp
-  if user_input == "sunshine"
-    puts "Probably a vampire"
-      break
-  end
-end
-
-employee_total = employee_total - 1
-end
-
-puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
