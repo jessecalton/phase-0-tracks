@@ -8,7 +8,7 @@ aliases = {
 }
 until real_name == "quit"
 
-puts "What is your first and last name?"
+puts "What is your first and last name? (type 'quit' to quit)"
 real_name = gets.chomp
 if real_name == "quit"
   break
@@ -43,39 +43,32 @@ end
 
 final_spy_name = new_name.join(' ')
 
-puts "Congratulations, your spy name is #{new_name.join(' ')}." 
+puts "Congratulations, your spy name is #{new_name.join(' ')}!" 
 
 
 
 
 
-p real_name
-p final_spy_name
+# p real_name
+# p final_spy_name
 
 
 aliases[:spy_names].push(final_spy_name)
 
-p aliases[:real_names]
-p aliases[:spy_names]
-
+# p aliases[:real_names]
+# p aliases[:spy_names]
 
 
 end
+x = aliases[:real_names].length
 
-
-# x = 0 
-# while aliases[:real_names].length <= x
-#   p aliases[:real_names][x]
-#   p aliases[:spy_names][x]
-#   puts "#{aliases[:real_names][x]} is really #{aliases[:spy_names][x]}."
-#   x = (x + 1)
-# end
-
-# ["a", "e", "i", "o", "u"]
+x.times do |y|
+  p "#{aliases[:real_names][y]} is really #{aliases[:spy_names][y]}."
+end
 
 
 
-### PSEUDOCODE!
+### PSEUDOCODE! (or more like glorified scratch paper)
 
 # Enter a spy name
 
