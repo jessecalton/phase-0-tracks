@@ -17,7 +17,7 @@ class Santa
   def reindeer_ranking
     reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
   end
-  def how_old(age=0)
+  def how_old(age=0) #defaults to 0
     puts "#{age} years old"
     @age = age
   end

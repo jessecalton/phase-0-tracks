@@ -1,15 +1,15 @@
-# module Shout
-#   def self.yell_angrily(words)
-#     words + "!!!" + " :("
-#   end
-#   def self.yell_happily(words)
-#     words + "!!!" + " :)"
-#   end
-# end
+module Shout
+  def self.yell_angrily(words)
+    words + "!!!" + " :("
+  end
+  def self.yell_happily(words)
+    words + "!!!" + " :)"
+  end
+end
 
-# speaker = Shout
-# speaker.yell_angrily("Get offa my property")
-# speaker.yell_happily("Just kidding come back")
+speaker = Shout
+speaker.yell_angrily("Get offa my property")
+speaker.yell_happily("Just kidding come back")
 
 module Shout
   def thing_to_shout(words)
