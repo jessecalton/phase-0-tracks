@@ -1,29 +1,40 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Gina Benavidez ].
+# We spent 2 hours on this challenge.
 
 # EXPLANATION OF require_relative
 #
 #
 require_relative 'state_data'
+# loading a module is called 'requiring.'
+# If we require something in the same directory, we use require_relative
+# In our require declaration we write the file path to the file we're going to require.
+
 
 class VirusPredictor
 
+  # Initializing each piece of the hash, which is our state of origin and its population
+  # density, and population
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
-  def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
-  end
+  # private
 
-  private
+  # Instance method is called within another instance method. Two helper methods.
+  # A nested call.
 
-  def predicted_deaths(population_density, population, state)
+  # def virus_effects
+  #   predicted_deaths(@population_density, @population, @state)
+  #   speed_of_spread(@population_density, @state)
+  # end
+
+# runs logic using any present parameters. Returns how many people will die
+# based on population density.
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +52,9 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+# Lets us know how fast the disease will spread throughout the state. Gives
+# our speed in months.
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -69,19 +82,44 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
+STATE_DATA.each do |state, data|
+  deaths = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population])
+  deaths.predicted_deaths
+  deaths.speed_of_spread
+end
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+# alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+# alabama.virus_effects
 
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+# jersey.virus_effects
 
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+# california.virus_effects
 
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
+# alaska.virus_effects
 
 
 #=======================================================================
 # Reflection Section
+
+# The syntax in the "key" portion is the the string name separated by commas in the data structures. 
+# The syntax in the "key value" uses the rocket syntax and shows the values attached to the keys.
+
+# loading a module is called 'requiring.'
+# If we require something in the same directory, we use require_relative
+# In our require declaration we write the file path to the file we're going to require.
+
+# .each, .map, and a for loop
+
+# The variables were already set as instance variables in the initialize method, and therefore it would be redundant to
+# call on them in the following methods.
+
+# Iterating over a hash and using hashes within a class variable.
+
+
+
+
+
+
