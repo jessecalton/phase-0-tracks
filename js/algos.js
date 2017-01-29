@@ -33,6 +33,19 @@
 
 // countLength(newArray);
 
+// ---------------------
+
+// PSEUDOCODE
+// Make hashes with names and ages
+// Figure out how to manipulate items in a hash
+// Make a function that takes items of the same key and 
+// compares them.
+//    If the two items are identical, return true
+//    If not, go to the next two items in the next
+//    key pair value. If those are identical, return true.
+//    If no key value pairs match, return false
+
+
 var hashMike = { name: "Mike", age: "26" }
 var hashRoger = { name: "Roger", age: "32" }
 var hashEd = { name: "Ed", age: "26" }
@@ -52,6 +65,47 @@ function compareHashes(hash1, hash2){
 }
 
 compareHashes(hashMike, hashEd)
+
+// ----------------------
+// Release 2
+//
+// PSEUDOCODE!
+//
+// Find the random number generator
+// Create an array
+// The integer we put in when we call our method will be the 
+// amount of items in the array.
+// The items will be comprised of 1 to 10 letters
+//    We will need to iterate over the alphabet a random number
+//    of times (1 to 10 times to be exact) and push those numbers
+//    into a string.
+// The random string we just created will get pushed into the array
+// This method will loop as many times as our input tells us to.
+// Return that array and make it a variable
+// Run that variable in the longest word function
+
+function wordGenerator(int){
+  var newArray = [];
+  var newString = "";
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var stringLength = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  for (var i = 0; i < int; i++){
+    newSL = (stringLength[Math.floor((Math.random() * 10) + 0)]);
+    // console.log(newSL);
+    newString = "";
+    for (x = 0; x < newSL; x++){
+      newString += alphabet[Math.floor((Math.random() * 25) + 0)];
+      
+    }
+    // console.log(newString);
+    newArray[i] = newString;
+  }
+return newArray
+}
+// Math.floor((Math.random() * 10) + 1);
+
+
+wordGenerator(3)
 
 
 
