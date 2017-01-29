@@ -13,25 +13,25 @@
 // Use that index location and fetch the value from our
 // original array.
 
-// var longArray = ["long array", "longer array", "longest array"];
-// var newArray = ["french fries", "oreos", "Canadian bacon", "gumballs"];
+var longArray = ["long array", "longer array", "longest array"];
+var newArray = ["french fries", "oreos", "Canadian bacon", "gumballs"];
 
-// function countLength(arr) {
-//   var biggestNum = 0
-//   var longestName = ""
-//   for (i = 0; i <= arr.length - 1; i++) {
-//     if (arr[i].length > biggestNum) {
-//       biggestNum = arr[i].length;
-//       longestName = arr[i]
-//       }
+function countLength(arr) {
+  var biggestNum = 0
+  var longestName = ""
+  for (i = 0; i <= arr.length - 1; i++) {
+    if (arr[i].length > biggestNum) {
+      biggestNum = arr[i].length;
+      longestName = arr[i]
+      }
       
-//     }
-//   console.log(longestName)
-// }
+    }
+  console.log(longestName)
+}
 
-// countLength(longArray);
+countLength(longArray);
 
-// countLength(newArray);
+countLength(newArray);
 
 // ---------------------
 
@@ -105,7 +105,12 @@ return newArray
 // Math.floor((Math.random() * 10) + 1);
 
 
-wordGenerator(3)
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for (var z = 0; z < 10; z++){
+  yayArray = wordGenerator(numbers[Math.floor((Math.random() * 10) + 0)]);
+console.log(yayArray);
+countLength(yayArray);
+}
 
 
 
