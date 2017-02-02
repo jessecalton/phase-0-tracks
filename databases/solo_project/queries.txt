@@ -1,0 +1,82 @@
+sqlite> SELECT * FROM writers;                                                  
+1|William Shakespeare|52|false|1
+2|Ernest Hemingway|61|false|2
+3|Toni Morrison|85|true|2
+4|Zadie Smith|41|true|1
+5|Cormac McCarthy|83|true|2
+6|Anton Chekhov|44|false|3
+7|Fyodor Dostoyevsky|59|false|3
+8|Dave Eggers|46|true|2
+9|Kurt Vonnegut|84|false|2
+10|Salman Rushdie|69|true|1
+
+sqlite> SELECT * FROM writers WHERE still_writing="true";
+3|Toni Morrison|85|true|2
+4|Zadie Smith|41|true|1
+5|Cormac McCarthy|83|true|2
+8|Dave Eggers|46|true|2
+10|Salman Rushdie|69|true|1
+
+sqlite> SELECT * FROM writers, nationality WHERE writers.nationality = nationality.id;
+1|William Shakespeare|52|false|1|1|British
+2|Ernest Hemingway|61|false|2|2|American
+3|Toni Morrison|85|true|2|2|American
+4|Zadie Smith|41|true|1|1|British
+5|Cormac McCarthy|83|true|2|2|American
+6|Anton Chekhov|44|false|3|3|Russian
+7|Fyodor Dostoyevsky|59|false|3|3|Russian
+8|Dave Eggers|46|true|2|2|American
+9|Kurt Vonnegut|84|false|2|2|American
+10|Salman Rushdie|69|true|1|1|British
+
+sqlite> SELECT writers.name, nationality.name FROM writers JOIN nationality ON writers.nationality = nationality.id;
+William Shakespeare|British
+Ernest Hemingway|American
+Toni Morrison|American
+Zadie Smith|British
+Cormac McCarthy|American
+Anton Chekhov|Russian
+Fyodor Dostoyevsky|Russian
+Dave Eggers|American
+Kurt Vonnegut|American
+Salman Rushdie|British
+
+sqlite> DELETE FROM writers
+   ...> WHERE name="William Shakespeare";
+sqlite> SELECT * FROM writers;
+2|Ernest Hemingway|61|false|2
+3|Toni Morrison|85|true|2
+4|Zadie Smith|41|true|1
+5|Cormac McCarthy|83|true|2
+6|Anton Chekhov|44|false|3
+7|Fyodor Dostoyevsky|59|false|3
+8|Dave Eggers|46|true|2
+9|Kurt Vonnegut|84|false|2
+10|Salman Rushdie|69|true|1
+sqlite>
+
+Joins
+
+sqlite> SELECT writers.name, nationality.id
+   ...> FROM writers
+   ...> LEFT JOIN nationality
+   ...> ON writers.nationality=nationality.id
+   ...> ORDER BY nationality.id;
+Zadie Smith|1
+Salman Rushdie|1
+Ernest Hemingway|2
+Toni Morrison|2
+Cormac McCarthy|2
+Dave Eggers|2
+Kurt Vonnegut|2
+Anton Chekhov|3
+Fyodor Dostoyevsky|3
+
+sqlite> SELECT writers.name, nationality.name
+   ...> FROM writers
+   ...> RIGHT JOIN nationality
+   ...> ON writers.nationality=nationality.name
+   ...> ORDER BY nationality.name;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
