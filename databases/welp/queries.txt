@@ -1,0 +1,20 @@
+sqlite> SELECT users.id, users.first, users.last, reviews.stars, reviews.comment, reviews.business_id, reviews.user_id, businesses.id, businesses.name
+   ...> FROM reviews INNER JOIN users ON reviews.user_id=users.id
+   ...> INNER JOIN businesses ON reviews.business_id=businesses.id;
+1|Bradford|Pitt|5|pasta was to DIE for!|1|1|1|Grundy Hollow Wedding Chapel
+7|Denzel|George|2|there was a strange smell gross!|4|7|4|Lotus Yoga
+3|Angela|Jolie|3|the sushi here was meh but cheap|6|3|6|Sushi World
+
+sqlite> SELECT users.first, users.last, businesses.name, reviews.stars, reviews.comment
+   ...> FROM reviews INNER JOIN users ON reviews.user_id=users.id
+   ...> INNER JOIN businesses ON reviews.business_id=businesses.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|pasta was to DIE for!
+Denzel|George|Lotus Yoga|2|there was a strange smell gross!
+Angela|Jolie|Sushi World|3|the sushi here was meh but cheap
+
+sqlite> SELECT businesses.name, reviews.comment, reviews.stars, users.first, users.last
+   ...> FROM businesses INNER JOIN reviews ON businesses.id=reviews.business_id
+   ...> INNER JOIN users ON reviews.user_id=users.id;                           
+Grundy Hollow Wedding Chapel|pasta was to DIE for!|5|Bradford|Pitt
+Lotus Yoga|there was a strange smell gross!|2|Denzel|George
+Sushi World|the sushi here was meh but cheap|3|Angela|Jolie
