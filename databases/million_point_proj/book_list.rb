@@ -42,11 +42,13 @@ puts "What three books did you read last month?"
   title = gets.chomp
   finished_book(db, title)
 end
-
+puts "***"
 puts "Time passes..."
-puts "..."
-puts "..."
-puts "..."
+puts "...reading..."
+puts "...reading..."
+puts "...reading..."
+puts "...reading..."
+puts "...OK!"
 puts "You've reached the end of the month! What books did you finish? Type 'done' when complete."
 
 def remove_book(db, title)
@@ -65,13 +67,12 @@ end
 puts "Here are the books you have completed:"
 
 books = db.execute("SELECT * FROM books_read")
-puts books.class
-p books
 
 books.each do |book|
   puts "You finished '#{book['title']}'. That is a great read!"
 end
 
-puts "Thanks for playing!"
+puts "Goodbye!"
+puts "Don't forget to share the love of reading!"
 
 
