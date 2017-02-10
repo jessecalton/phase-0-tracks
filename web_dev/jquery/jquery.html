@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $(".bad").hide();
+      });
+    $("#flip").click(function(){
+      $("#panel").slideDown("slow");
+    });
+  });
+</script>
+<style>
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: red;
+    border: solid 1px black;
+  }
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+</style>
+  <title>jQuery test</title>
+</head>
+<body>
+  <h2>These are all the Star Wars movies:</h2>
+  <p class="bad">The Phantom Menace</p>
+  <p class="bad">Attack of the Clones</p>
+  <p class="bad">Revenge of the Sith</p>
+  <p>A New Hope</p>
+  <p>Empire Strikes Back</p>
+  <p>Return of the Jedi</p>
+  <p>The Force Awakens</p>
+
+<button>Click here to delete the bad Star Wars movies</button>
+
+  <div id="flip">Click to see the new Star Wars movie coming this year!</div>
+  <div id="panel"><img src="star.jpg" alt ="Last Jedi" style="width:304px;height:228px;"></div>
+
+  
+</body>
+</html>
