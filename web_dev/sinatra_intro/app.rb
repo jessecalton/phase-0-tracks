@@ -40,7 +40,7 @@ get '/add' do
   num1 = params[:num1]
   num2 = params[:num2]
   result = num1.to_i + num2.to_i
-  result.to_s
+  result.to_s 
 end
 
 # write a GET route that retrieves
